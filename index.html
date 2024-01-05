@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My TODO application</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>TODO LIST</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container grid grid-row-2">
+            <div class="l">
+                <div class="filter-block">
+
+                    <div class="form-row">
+                        <label for="todo-text">Search by title</label>
+                        <input class="form-input" id="search" type="text" name="search">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="filter-users-select">Filter by user</label>
+                        <select class="form-input" name="filterByUser" id="filter-users-select">
+                            <option value="0">None</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="filter-todo-status">Filter By Status</label>
+                        <select class="form-input" name="filterByStatus" id="filter-todo-status">
+                            <option value="0">All</option>
+                            <option value="1">Completed</option>
+                            <option value="2">Not completed</option>
+                        </select>
+                    </div>
+
+                    <div class="btn-group">
+                        <button id="reset-filter-button" class="btn btn-primary" type="button">Reset filters</button>
+                    </div>
+                </div>
+            </div>
+            <div class="m">
+                <form id="todo-form" action="" autocomplete="off" class="form-block">
+                    <div class="form-row">
+                        <label for="todo-text">Enter todo text</label>
+                        <input class="form-input" id="todo-text" type="text" name="todoText">
+                    </div>
+                    <div class="form-row">
+                        <!-- <label for="todo-text">Select user</label> -->
+                        <select class="form-input" name="todoUser" id="users-select">
+                            <option disabled selected>Select user</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Add todo</button>
+                </form>
+    
+                <ul id="todo-list" class="todo-list">
+                    
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>@copy 2023</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
